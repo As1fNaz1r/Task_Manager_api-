@@ -5,6 +5,8 @@ This is a task management system built with Flask and PostgreSQL, providing a RE
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+- [Features](#features)
+- [Technologies](#technologies)
 - [Running the Application Locally](#running-the-application-locally)
 - [Approach and Assumptions](#approach-and-assumptions)
 
@@ -15,6 +17,29 @@ Follow these instructions to set up and run the project on your local machine.
 ### Prerequisites
 
 - [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Git](https://git-scm.com/)
+
+  
+### Clone the Repository
+
+git clone https://github.com/As1fNaz1r/Task_Manager_api-
+cd task_manager_api
+
+  ## Features
+
+- User registration and authentication with JWT.
+- CRUD operations for tasks.
+- Role-based access control for task management.
+- Dockerized setup for easy deployment.
+
+## Technologies
+
+- **Backend:** Flask, Flask-SQLAlchemy
+- **Database:** PostgreSQL
+- **Authentication:** Flask-JWT-Extended
+- **Containerization:** Docker, Docker Compose
+- **Documentation:** Postman
 
 ## Running the Application Locally
 #### Set Up Environment Variables
@@ -38,10 +63,11 @@ If you make changes to the models and need to apply them, run:
 
 ## Approach and Assumptions
 #### Approach
-- Framework Choice: Flask was chosen for its simplicity and ease of use in building RESTful APIs.
-- Database: PostgreSQL is used as the relational database, and SQLAlchemy is the ORM.
-- JWT Authentication: Implemented JWT for securing API endpoints.
-Dockerization: Docker is used to ensure consistency across different environments, making the application easily portable.
+
+- The application follows a RESTful API design.
+- Docker is used for containerization, making the application easy to deploy on different environments.
+- Flask-SQLAlchemy is used to interact with the PostgreSQL database.
+
 ### Assumptions
-- The application assumes well-formed user input and does not include extensive validation or sanitization.
-- Tasks are user-specific, meaning each user can only see and manage their own tasks.
+- The application is designed as a proof-of-concept for task management.
+- The focus was on setting up a functional API with basic authentication and task management features.
